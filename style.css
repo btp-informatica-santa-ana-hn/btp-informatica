@@ -1055,3 +1055,31 @@ details.tarjeta-materia h4 {
     transform: translateY(0);
   }
 }
+/* Ajustes para pantallas pequeñas (Celulares) */
+@media (max-width: 768px) {
+  /* Evita que la página se mueva hacia los lados */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* Reduce el tamaño de los títulos grandes */
+  h1, .titulo-principal {
+    font-size: 1.8rem !important;
+    word-wrap: break-word;
+  }
+
+  /* Cambia las columnas para que queden una debajo de otra */
+  .contenedor-grid, .flex-container, .clases-container {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  /* Ajusta el ancho de las tarjetas */
+  .card, .tarjeta {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+}
