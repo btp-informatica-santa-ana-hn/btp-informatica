@@ -4,44 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BTP Informática - Nuestros Laboratorios & Infraestructura</title>
+  
+  <!-- Tipografías de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Enlace a tu archivo CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
- <!-- NAVERACIÓN PRINCIPAL UNIFICADA -->
-<nav class="navbar">
-  <div class="logo-text">BTP INFORMÁTICA</div>
-  
-  <!-- Botón Hamburguesa -->
-  <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-</nav>
+  <!-- ==========================================
+       NAVEGACIÓN PRINCIPAL Y MENÚ LATERAL
+       ========================================== -->
+  <nav class="navbar">
+    <div class="logo-text">BTP INFORMÁTICA</div>
+    
+    <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
 
-<!-- Capa oscura de fondo al abrir el menú -->
-<div class="menu-overlay" id="menuOverlay"></div>
+  <div class="menu-overlay" id="menuOverlay"></div>
 
-<!-- Menú Lateral Desplegable -->
-<aside class="nav-menu" id="navMenu">
-  <a href="index.html"> Inicio (Feria Tecnológica)</a>
-  <a href="inicio.html"class="active"> Equipos y Laboratorios</a>
-  <a href="class.html">Clases y Asignaturas</a>
-</aside>
+  <aside class="nav-menu" id="navMenu">
+    <a href="index.html">Inicio (Feria Tecnológica)</a>
+    <a href="inicio.html" class="active">Equipos y Laboratorios</a>
+    <a href="class.html">Clases y Asignaturas</a>
+  </aside>
 
-  <!-- HERO HEADER -->
+  <!-- ==========================================
+       HERO HEADER (ENTRADA PRINCIPAL)
+       ========================================== -->
   <header class="hero-header" id="inicio">
     <span class="badge-neon">Infraestructura Tecnológica de Vanguardia</span>
     <h1>Nuestros Laboratorios</h1>
-    <p>
+    <p style="color: var(--text-muted); max-width: 750px; margin: 0 auto;">
       Instalaciones equipadas con tecnología de alto rendimiento para el aprendizaje práctico en desarrollo de software, arquitectura de redes UTP/Wi-Fi y mantenimiento avanzado de cómputo.
     </p>
   </header>
 
   <main class="container">
 
-    <!-- MARCADOR DE ESTADÍSTICAS -->
+    <!-- ==========================================
+         MARCADOR DE ESTADÍSTICAS (STATS BAR)
+         ========================================== -->
     <section class="stats-bar">
       <div class="stat-item glass-card">
         <h3>2</h3>
@@ -61,17 +71,19 @@
       </div>
     </section>
 
-    <!-- TARJETAS DETALLADAS DE LOS LABORATORIOS -->
+    <!-- ==========================================
+         TARJETAS DETALLADAS DE LOS LABORATORIOS
+         ========================================== -->
     <section id="instalaciones" style="margin-bottom: 4rem;">
-      <h2 class="section-title">Áreas de <span>Aprendizaje Técnico</span></h2>
+      <h2 style="color: var(--primary-neon); margin-bottom: 1.5rem; text-align: center;">Áreas de Aprendizaje Técnico</h2>
       
       <div class="grid-cards">
         
         <!-- Laboratorio 01 -->
         <article class="card">
           <span class="badge-neon">Lab 01</span>
-          <h3>Laboratorio Teórico-Práctico</h3>
-          <p>
+          <h3 style="color: var(--primary-neon); margin-bottom: 0.5rem;">Laboratorio Teórico-Práctico</h3>
+          <p style="color: var(--text-muted); margin-bottom: 1rem;">
             Espacio reacondicionado para impartición de clases magistrales, soporte técnico multimedia y gestión centralizada de equipos portátiles.
           </p>
           <ul class="feature-list">
@@ -85,9 +97,9 @@
 
         <!-- Laboratorio 02 -->
         <article class="card">
-          <span class="badge-neon" style="background: rgba(0, 242, 254, 0.2); color: var(--primary-neon);">Lab 02</span>
-          <h3 style="color: var(--secondary-neon);">Laboratorio de Alto Rendimiento</h3>
-          <p>
+          <span class="badge-neon" style="background: rgba(0, 242, 254, 0.2); color: var(--primary-neon); border-color: var(--primary-neon);">Lab 02</span>
+          <h3 style="color: var(--secondary-neon); margin-bottom: 0.5rem;">Laboratorio de Alto Rendimiento</h3>
+          <p style="color: var(--text-muted); margin-bottom: 1rem;">
             Estación de trabajo principal para el desarrollo de software, simulación de redes en Cisco Packet Tracer y armado de hardware.
           </p>
           <ul class="feature-list">
@@ -102,9 +114,11 @@
       </div>
     </section>
 
-    <!-- INVENTARIO DE HARDWARE & HERRAMIENTAS -->
+    <!-- ==========================================
+         INVENTARIO DE HARDWARE & HERRAMIENTAS
+         ========================================== -->
     <section id="equipamiento" style="margin-bottom: 4rem;">
-      <h2 class="section-title">Herramientas & <span>Equipamiento</span></h2>
+      <h2 style="color: var(--primary-neon); margin-bottom: 1.5rem; text-align: center;">Herramientas & Equipamiento de Trabajo</h2>
       
       <div class="glass-card">
         <div class="grid-cards" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;">
@@ -152,40 +166,44 @@
       </div>
     </section>
 
-    <!-- MÓDULOS DE APLICACIÓN TÉCNICA -->
+    <!-- ==========================================
+         MÓDULOS DE APLICACIÓN TÉCNICA
+         ========================================== -->
     <section id="modulos" style="margin-bottom: 4rem;">
-      <h2 class="section-title">Especialidades <span>en Lab</span></h2>
+      <h2 style="color: var(--primary-neon); margin-bottom: 1.5rem; text-align: center;">Especialidades Desarrolladas en Lab</h2>
       
       <div class="grid-cards">
         <div class="glass-card">
           <span class="badge-neon">Área 01</span>
-          <h3>Desarrollo de Software</h3>
-          <p>
+          <h3 style="color: var(--primary-neon); margin-bottom: 0.5rem;">Desarrollo de Software</h3>
+          <p style="color: var(--text-muted);">
             Lógica de programación y POO en C++ y Python. Creación de interfaces y páginas web modernas con HTML, Sublime Text y Visual Studio Code.
           </p>
         </div>
 
         <div class="glass-card">
           <span class="badge-neon">Área 02</span>
-          <h3>Redes & Conectividad</h3>
-          <p>
-            Ponchado y ponchadoras de redes UTP Cat6, subredes IP, diagnósticos en consola con <code>ping</code>, <code>nslookup</code>, <code>nmap</code> y configuración de routers.
+          <h3 style="color: var(--primary-neon); margin-bottom: 0.5rem;">Redes & Conectividad</h3>
+          <p style="color: var(--text-muted);">
+            Ponchado y ponchadoras de redes UTP Cat6, subredes IP, diagnósticos en consola con `ping`, `nslookup`, `nmap` y configuración de routers.
           </p>
         </div>
 
         <div class="glass-card">
           <span class="badge-neon">Área 03</span>
-          <h3>Soporte & Mantenimiento</h3>
-          <p>
+          <h3 style="color: var(--primary-neon); margin-bottom: 0.5rem;">Soporte & Mantenimiento</h3>
+          <p style="color: var(--text-muted);">
             Ensamblaje de componentes de PC, configuración de BIOS/UEFI en equipos Dell/HP, formateo de unidades, instalación de SO y controladores.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- GALERÍA DE ACTIVIDADES (REELS GRID) -->
+    <!-- ==========================================
+         GALERÍA DE ACTIVIDADES (REELS GRID)
+         ========================================== -->
     <section id="galeria" style="margin-bottom: 4rem;">
-      <h2 class="section-title">Demostración <span>Práctica</span></h2>
+      <h2 style="color: var(--primary-neon); margin-bottom: 0.5rem; text-align: center;">Demostración Práctica</h2>
       <p style="color: var(--text-muted); text-align: center; margin-bottom: 1.5rem;">Haz clic en cualquier tarjeta para ver detalles y ejemplos en vivo.</p>
       
       <div class="reels-grid">
@@ -238,14 +256,16 @@
       <div class="modal-content glass-card">
         <button class="modal-close" onclick="closeModal()">&times;</button>
         <div id="modal-body">
-          <!-- El contenido dinámico se inyectará con JavaScript -->
+          <!-- Contenido dinámico inyectado con JavaScript -->
         </div>
       </div>
     </div>
 
-    <!-- TERMINAL INTERACTIVA DE ESTADO -->
+    <!-- ==========================================
+         TERMINAL INTERACTIVA DE ESTADO
+         ========================================== -->
     <section id="redes" style="margin-bottom: 4rem;">
-      <h2 class="section-title">Consola de <span>Estado del Sistema</span></h2>
+      <h2 style="color: var(--primary-neon); margin-bottom: 1.5rem; text-align: center;">Consola de Estado del Sistema</h2>
       
       <div class="terminal-box">
         <div class="terminal-header">
@@ -273,66 +293,86 @@
 
   </main>
 
-  <!-- FOOTER -->
-  <footer id="contacto">
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>BTP INFORMÁTICA</h3>
-        <p>
-          Formando a los futuros profesionales de la tecnología con herramientas modernas e infraestructura de vanguardia.
-        </p>
-      </div>
+  <!-- ==========================================
+       CYBER FOOTER (PIE DE PÁGINA)
+       ========================================== -->
+  <footer class="cyber-footer">
+    <div class="footer-container">
       
-      <div class="footer-section">
-        <h3>Ubicación</h3>
-        <p>Edificio Principal de Informática</p>
-        <p>Laboratorios 01 y 02</p>
+      <!-- CAJITA DE CONTACTO -->
+      <div class="footer-card" id="contacto">
+        <div class="footer-card-header">
+          <img src="logo1.jpeg" alt="Escudo C.E.M.G. Santa Ana" class="footer-card-logo">
+          <div>
+            <h3 class="footer-title"><span class="highlight-cyan">CONTACTO</span></h3>
+            <p class="footer-subtitle-text">CEMG Santa Ana</p>
+          </div>
+        </div>
+        <ul class="contact-list">
+          <li>📍 <span>Santa Ana, Francisco Morazán, Honduras</span></li>
+          <li>✉️ <span>mirian.valenzuela@educatrachos.hn</span></li>
+          <li>🕒 <span>Jornada Matutina y Nocturna</span></li>
+        </ul>
       </div>
 
-      <div class="footer-section">
-        <h3>Especialidad</h3>
-        <p>Bachillerato Técnico Profesional en Informática</p>
-        <p style="color: var(--primary-neon); font-weight: 700;">Sección 12-2</p>
+      <!-- CAJITA DE CRÉDITOS -->
+      <div class="footer-card" id="creditos">
+        <div class="footer-card-header">
+          <img src="logo2.jpeg" alt="Escudo BTP Informática" class="footer-card-logo">
+          <div>
+            <h3 class="footer-title"><span class="highlight-pink">CRÉDITOS</span></h3>
+            <p class="footer-subtitle-text">Desarrollo Web</p>
+          </div>
+        </div>
+
+        <div class="credits-grid">
+          <div class="credit-group">
+            <h4 class="group-title">12 "1" BTP Informática:</h4>
+            <ul class="student-list">
+              <li>Isis Avila</li>
+              <li>Genesis García</li>
+              <li>Fergie Colindres</li>
+            </ul>
+          </div>
+
+          <div class="credit-group">
+            <h4 class="group-title">12 "2" BTP Informática:</h4>
+            <ul class="student-list">
+              <li>Joel Torres</li>
+              <li>Anderlin Flores</li>
+              <li>Eduardo Fonseca</li>
+            </ul>
+          </div>
+        </div>
       </div>
+
     </div>
 
+    <!-- BARRA DERECHOS DE AUTOR -->
     <div class="footer-bottom">
-      <p>&copy; 2026 BTP Informática - Todos los derechos reservados.</p>
-      <p style="margin-top: 0.4rem; color: var(--primary-neon);">Joel Alexander Torres Figueroa - 12mo 2</p>
+      <p>© 2026 BTP en Informática — CEMG Santa Ana | Todos los derechos reservados</p>
     </div>
   </footer>
 
+  <!-- ==========================================
+       SCRIPTS INTERACTIVOS (MENÚ + MODAL)
+       ========================================== -->
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // ===== MENÚ HAMBURGUESA =====
-      try {
-        const hamburger = document.getElementById('hamburger');
-        const navMenu = document.getElementById('navMenu');
-        const overlay = document.getElementById('menuOverlay');
+    // Lógica para abrir/cerrar Menú Hamburguesa Lateral
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navMenu = document.getElementById('navMenu');
+    const menuOverlay = document.getElementById('menuOverlay');
 
-        if (hamburger && navMenu && overlay) {
-          function toggleMenu() {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-            overlay.classList.toggle('active');
-          }
-          hamburger.addEventListener('click', toggleMenu);
-          overlay.addEventListener('click', toggleMenu);
+    function toggleMenu() {
+      hamburgerBtn.classList.toggle('active');
+      navMenu.classList.toggle('active');
+      menuOverlay.classList.toggle('active');
+    }
 
-          document.querySelectorAll('.nav-menu a').forEach(function (link) {
-            link.addEventListener('click', function () {
-              hamburger.classList.remove('active');
-              navMenu.classList.remove('active');
-              overlay.classList.remove('active');
-            });
-          });
-        }
-      } catch (e) {
-        console.error('Error en el menú:', e);
-      }
-    });
+    hamburgerBtn.addEventListener('click', toggleMenu);
+    menuOverlay.addEventListener('click', toggleMenu);
 
-    // ===== DATOS DEL MODAL =====
+    // Datos dinámicos para los modales de la galería
     const modalData = {
       utp: {
         title: "🛠️ Ponchado de Cables UTP (Norma T568B)",
@@ -351,7 +391,7 @@
             <li>Blanco / Marrón</li>
             <li>Marrón</li>
           </ol>
-          <div class="modal-code-block">Herramientas usadas: Crimpadora RJ45, Tester UTP Cat6, Ponchadora de impacto.</div>
+          <div class="modal-code-block"><pre><code>Herramientas usadas: Crimpadora RJ45, Tester UTP Cat6, Ponchadora de impacto.</code></pre></div>
         `
       },
       cpp: {
@@ -361,14 +401,14 @@
             Desarrollo de algoritmos, manejo de arreglos y persistencia de datos mediante archivos.
           </p>
           <h4 style="color: var(--secondary-neon); margin-bottom: 0.5rem;">Código de Ejemplo en Lab:</h4>
-          <div class="modal-code-block">#include &lt;iostream&gt;
+          <div class="modal-code-block"><pre><code>#include &lt;iostream&gt;
 using namespace std;
 
 int main() {
     cout &lt;&lt; "BTP Informática - Lab 02" &lt;&lt; endl;
     cout &lt;&lt; "Sistema de Gestión de Redes Activo" &lt;&lt; endl;
     return 0;
-}</div>
+}</code></pre></div>
         `
       },
       hardware: {
@@ -393,11 +433,11 @@ int main() {
             Diseño web moderno utilizando HTML5, CSS Grid, Flexbox y temas neón con efectos visuales.
           </p>
           <h4 style="color: var(--secondary-neon); margin-bottom: 0.5rem;">Regla CSS de Ejemplo:</h4>
-          <div class="modal-code-block">.glow-card {
+          <div class="modal-code-block"><pre><code>.glow-card {
   background: rgba(18, 24, 43, 0.85);
   border: 1px solid #00f2fe;
   box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
-}</div>
+}</code></pre></div>
         `
       }
     };
@@ -425,81 +465,5 @@ int main() {
       }
     }
   </script>
- <footer class="cyber-footer">
-  <div class="footer-container">
-    
-    
-<!-- CAJITA DE CONTACTO (Con Escudo del Colegio) -->
-    <div class="footer-card" id="contacto">
-      <div class="footer-card-header">
-        <img src="logo1.jpeg" alt="Escudo C.E.M.G. Santa Ana" class="footer-card-logo">
-        <div>
-          <h3 class="footer-title"><span class="highlight-cyan"> CONTACTO</span></h3>
-          <p class="footer-subtitle-text">CEMG Santa Ana</p>
-        </div>
-      </div>
-      <ul class="contact-list">
-        <li>📍 <span>Santa Ana, Francisco Morazán, Honduras</span></li>
-        <li>✉️ <span>mirian.valenzuela@educatrachos.hn</span></li>
-        <li>🕒 <span>Jornada Matutina y Nocturna</span></li>
-      </ul>
-    </div>
-    <!-- CAJITA DE CRÉDITOS -->
-  <div class="footer-card" id="creditos">
-      <div class="footer-card-header">
-        <img src="logo2.jpeg" alt="Escudo BTP Informática" class="footer-card-logo">
-        <div>
-          <h3 class="footer-title"><span class="highlight-pink">S CRÉDITOS</span></h3>
-          <p class="footer-subtitle-text">Desarrollo Web</p>
-        </div>
-      </div>
-
-      <div class="credits-grid">
-        <div class="credit-group">
-          <h4 class="group-title">12 "1" BTP Informática:</h4>
-          <ul class="student-list">
-            <li>Isis Avila</li>
-            <li>Genesis García</li>
-            <li>Fergie Colindres</li>
-          </ul>
-        </div>
-
-        <div class="credit-group">
-          <h4 class="group-title">12 "2" BTP Informática:</h4>
-          <ul class="student-list">
-            <li>Joel Torres</li>
-            <li>Anderlin Flores</li>
-            <li>Eduardo Fonseca</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- BARRA DERECHOS DE AUTOR -->
-  <div class="footer-bottom">
-    <p>© 2026 BTP en Informática — CEMG Santa Ana | Todos los derechos reservados</p>
-  </div>
-</footer>
-
-
- <script>
-  const hamburgerBtn = document.getElementById('hamburgerBtn');
-  const navMenu = document.getElementById('navMenu');
-  const menuOverlay = document.getElementById('menuOverlay');
-
-  hamburgerBtn.addEventListener('click', () => {
-    hamburgerBtn.classList.toggle('active');
-    navMenu.classList.toggle('active');
-    menuOverlay.classList.toggle('active');
-  });
-
-  menuOverlay.addEventListener('click', () => {
-    hamburgerBtn.classList.remove('active');
-    navMenu.classList.remove('active');
-    menuOverlay.classList.remove('active');
-  });
-</script>
 </body>
 </html>

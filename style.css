@@ -95,7 +95,6 @@ h1, h2, h3, .logo-text {
 }
 
 /* Menú Lateral Desplegable */
-
 .nav-menu {
   position: fixed;
   top: 0;
@@ -116,9 +115,9 @@ h1, h2, h3, .logo-text {
 /* CUANDO SE ACTIVA VUELVE A LA PANTALLA */
 .nav-menu.active {
   right: 0 !important;
+  display: flex !important;
+  visibility: visible !important;
 }
-
-
 
 .nav-menu a {
   color: var(--text-main);
@@ -167,8 +166,9 @@ h1, h2, h3, .logo-text {
 }
 
 .container {
-  max-width: 1100px;
-  margin: 2rem auto;
+  width: 90% !important;
+  max-width: 1400px !important;
+  margin: 2rem auto !important;
   padding: 0 1.5rem;
 }
 
@@ -205,6 +205,22 @@ h1, h2, h3, .logo-text {
   margin-bottom: 1rem;
 }
 
+/* Grid de 2 columnas para asignaturas/grados */
+.grid-grados {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2.5rem;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .grid-grados {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 3rem !important;
+  }
+}
+
 /* ==========================================
    FOOTER CON CONTACTO
    ========================================== */
@@ -236,6 +252,7 @@ footer {
   color: var(--text-muted);
   font-size: 0.9rem;
 }
+
 /* ==========================================
    ELEMENTOS EXTRA INTERACTIVOS Y LLAMATIVOS
    ========================================== */
@@ -259,37 +276,97 @@ footer {
 
 /* 2. Galería de Videos Tipo Reels / TikTok */
 .reels-grid {
-  display: flex;
-  gap: 1.5rem;
-  overflow-x: auto;
-  padding: 1rem 0 2rem;
+  display: flex !important;
+  gap: 1.5rem !important;
+  overflow-x: auto !important;
+  padding: 1rem 0.5rem 2rem !important;
   scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+.reels-grid::-webkit-scrollbar {
+  height: 8px;
+}
+.reels-grid::-webkit-scrollbar-thumb {
+  background: var(--primary-neon);
+  border-radius: 4px;
 }
 
 .reel-card {
-  flex: 0 0 260px;
-  height: 440px;
-  scroll-snap-align: start;
-  border-radius: var(--radius);
-  overflow: hidden;
-  position: relative;
-  border: 2px solid var(--primary-neon);
-  box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+  position: relative !important;
+  flex: 0 0 280px !important;
+  min-width: 280px !important;
+  height: 450px !important;
+  scroll-snap-align: start !important;
+  border-radius: var(--radius) !important;
+  overflow: hidden !important;
+  border: 2px solid var(--primary-neon) !important;
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.3) !important;
+  background-color: #000000 !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
 }
 
-.reel-card video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.reel-card img,
+.reel-card video,
+.reel-card .reel-media {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  z-index: 1 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-.reel-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 1rem;
-  background: linear-gradient(transparent, rgba(5, 8, 16, 0.95));
+.reel-card .reel-badge {
+  position: absolute !important;
+  top: 1rem !important;
+  left: 1rem !important;
+  z-index: 3 !important;
+  background: rgba(0, 0, 0, 0.8) !important;
+  border: 1px solid var(--primary-neon) !important;
+  color: #ffffff !important;
+  padding: 0.3rem 0.8rem !important;
+  border-radius: 20px !important;
+  font-size: 0.8rem !important;
+}
+
+.reel-card .reel-overlay {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 3 !important;
+  padding: 1.2rem !important;
+  box-sizing: border-box !important;
+  background: linear-gradient(180deg, transparent 0%, rgba(5, 8, 16, 0.95) 70%) !important;
+}
+
+.reel-card .reel-overlay h4 {
+  color: var(--primary-neon) !important;
+  margin: 0 0 0.4rem 0 !important;
+  font-size: 1.1rem !important;
+}
+
+.reel-card .reel-overlay p {
+  color: #a0aec0 !important;
+  margin: 0 !important;
+  font-size: 0.85rem !important;
+}
+
+.reel-card img,
+.reel-card video,
+.reel-card .reel-media,
+.reel-card .reel-badge,
+.reel-card .reel-overlay,
+.reel-card * {
+  pointer-events: none !important;
 }
 
 /* 3. Terminal Hacker Interactiva */
@@ -328,98 +405,7 @@ footer {
   color: var(--secondary-neon);
   text-shadow: 0 0 10px var(--secondary-neon);
 }
-/* ==========================================
-   ELEMENTOS EXTRA INTERACTIVOS Y LLAMATIVOS
-   ========================================== */
 
-/* 1. Tarjetas estilo Cristal (Glassmorphism) */
-.glass-card {
-  background: rgba(18, 24, 43, 0.6);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(0, 242, 254, 0.25);
-  border-radius: var(--radius);
-  padding: 2rem;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  transition: var(--transition);
-}
-
-.glass-card:hover {
-  border-color: var(--secondary-neon);
-  box-shadow: 0 0 25px rgba(255, 0, 127, 0.4);
-}
-
-/* 2. Galería de Videos Tipo Reels / TikTok */
-.reels-grid {
-  display: flex;
-  gap: 1.5rem;
-  overflow-x: auto;
-  padding: 1rem 0 2rem;
-  scroll-snap-type: x mandatory;
-}
-
-.reel-card {
-  flex: 0 0 260px;
-  height: 440px;
-  scroll-snap-align: start;
-  border-radius: var(--radius);
-  overflow: hidden;
-  position: relative;
-  border: 2px solid var(--primary-neon);
-  box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
-}
-
-.reel-card video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.reel-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 1rem;
-  background: linear-gradient(transparent, rgba(5, 8, 16, 0.95));
-}
-
-/* 3. Terminal Hacker Interactiva */
-.terminal-box {
-  background: #020408;
-  border: 1px solid var(--primary-neon);
-  border-radius: 8px;
-  font-family: 'Courier New', Courier, monospace;
-  padding: 1.5rem;
-  box-shadow: inset 0 0 10px rgba(0, 242, 254, 0.2);
-  color: var(--primary-neon);
-}
-
-.terminal-header {
-  display: flex;
-  gap: 6px;
-  margin-bottom: 1rem;
-}
-
-.dot { width: 10px; height: 10px; border-radius: 50%; }
-.dot-red { background: #ff5f56; }
-.dot-yellow { background: #ffbd2e; }
-.dot-green { background: #27c93f; }
-
-/* 4. Contador de Stats (Marcador) */
-.stats-bar {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1.5rem;
-  text-align: center;
-  margin: 3rem 0;
-}
-
-.stat-item h3 {
-  font-size: 2.5rem;
-  color: var(--secondary-neon);
-  text-shadow: 0 0 10px var(--secondary-neon);
-}
 /* ==========================================
    ESTILOS DEL TEST DE ESPECIALIDAD
    ========================================== */
@@ -483,12 +469,7 @@ footer {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
-/* FORZAR VISIBILIDAD DEL MENÚ ABIERTO */
-.nav-menu.active {
-  right: 0 !important;
-  display: flex !important;
-  visibility: visible !important;
-}
+
 /* ==========================================
    ESTILOS DEL SIMULADOR WEB INTERACTIVO
    ========================================== */
@@ -513,16 +494,6 @@ footer {
   display: flex;
   gap: 6px;
 }
-
-.dot { 
-  width: 10px; 
-  height: 10px; 
-  border-radius: 50%; 
-}
-
-.dot-red { background: #ff5f56; }
-.dot-yellow { background: #ffbd2e; }
-.dot-green { background: #27c93f; }
 
 .simulator-title {
   font-family: 'Orbitron', sans-serif;
@@ -587,7 +558,6 @@ footer {
   background: #ffffff;
 }
 
-/* Adaptación para pantallas pequeñas */
 @media (max-width: 768px) {
   .simulator-grid { 
     grid-template-columns: 1fr; 
@@ -597,11 +567,11 @@ footer {
     border-bottom: 1px solid rgba(0, 242, 254, 0.2); 
   }
 }
+
 /* ==========================================
-   AJUSTES PARA CLASES DEL HTML DE NAOMI
+   AJUSTES PARA CLASES DEL HTML 
    ========================================== */
 
-/* Encabezado y Badges */
 .main-header {
   text-align: center;
   padding: 3rem 1.5rem 1rem;
@@ -633,7 +603,6 @@ footer {
   font-weight: 700;
 }
 
-/* Contenedor Principal */
 .content-container {
   max-width: 1100px;
   margin: 2rem auto;
@@ -660,7 +629,6 @@ footer {
   text-shadow: 0 0 10px var(--primary-neon);
 }
 
-/* Tarjetas (cyber-card) */
 .cyber-card {
   position: relative;
   background: var(--card-bg);
@@ -758,6 +726,7 @@ footer {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
+
 /* ==========================================
    FOOTER CON TARJETAS SEPARADAS
    ========================================== */
@@ -778,7 +747,6 @@ footer {
   gap: 2rem;
 }
 
-/* Estilo de las Cajitas Contenedoras */
 .footer-card {
   background: rgba(13, 13, 26, 0.85);
   border: 1px solid rgba(0, 242, 254, 0.3);
@@ -807,7 +775,6 @@ footer {
   font-size: 0.95rem;
 }
 
-/* Contacto */
 .contact-list {
   list-style: none;
   padding: 0;
@@ -822,7 +789,6 @@ footer {
   gap: 0.5rem;
 }
 
-/* Créditos */
 .credits-grid {
   display: flex;
   flex-direction: column;
@@ -850,7 +816,7 @@ footer {
   color: #e0e0e0;
   margin-bottom: 0.2rem;
 }
-/* Cabecera interna de las tarjetas del footer */
+
 .footer-card-header {
   display: flex;
   align-items: center;
@@ -873,7 +839,6 @@ footer {
   margin: 0;
 }
 
-/* Franja inferior */
 .footer-bottom {
   text-align: center;
   padding: 1.2rem 1rem;
@@ -882,6 +847,7 @@ footer {
   font-size: 0.85rem;
   color: var(--text-muted);
 }
+
 /* ==========================================
    ESTILOS PARA ENCABEZADO CON LOGOS
    ========================================== */
@@ -920,7 +886,6 @@ footer {
   margin-top: -0.3rem;
 }
 
-/* Adaptación para pantallas de celular */
 @media (max-width: 650px) {
   .header-with-logos {
     flex-direction: column;
@@ -931,12 +896,13 @@ footer {
     width: 70px;
   }
 }
+
 /* ==========================================
-   ESTILOS CIBERPUNK / NEÓN PARA "TARJETA-MATERIA"
+   ESTILOS CORREGIDOS PARA "TARJETA-MATERIA"
    ========================================== */
 
-/* 1. Contenedor principal de la tarjeta desplegable (<details>) */
 details.tarjeta-materia {
+  position: relative;
   background: var(--card-bg);
   border: 1px solid rgba(0, 242, 254, 0.25);
   border-left: 4px solid var(--primary-neon);
@@ -950,13 +916,11 @@ details.tarjeta-materia {
   overflow: hidden;
 }
 
-/* Efecto Neón alternado (Tarjetas pares con borde Rosa Neón) */
 details.tarjeta-materia:nth-child(even) {
   border-left-color: var(--secondary-neon);
   border-right: 1px solid rgba(255, 0, 127, 0.2);
 }
 
-/* Hover Effect (Brillo y elevación al pasar el mouse) */
 details.tarjeta-materia:hover {
   transform: translateY(-4px);
   border-color: var(--primary-neon);
@@ -964,25 +928,20 @@ details.tarjeta-materia:hover {
               inset 0 0 15px rgba(0, 242, 254, 0.05);
 }
 
-details.tarjeta-materia:nth-child(even):hover {
-  border-color: var(--secondary-neon);
-  box-shadow: 0 0 25px rgba(255, 0, 127, 0.3),
-              inset 0 0 15px rgba(255, 0, 127, 0.05);
-}
-
-/* 2. Encabezado interactivo (<summary>) */
 details.tarjeta-materia summary {
   cursor: pointer;
   outline: none;
-  list-style: none; /* Oculta la flecha por defecto del navegador */
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
 }
 
-/* Quitar indicador estándar en Safari / WebKit */
 details.tarjeta-materia summary::-webkit-details-marker {
   display: none;
 }
 
-/* Estilos de títulos e imágenes dentro del summary */
 details.tarjeta-materia summary h3 {
   color: var(--text-main);
   font-size: 1.25rem;
@@ -1007,12 +966,15 @@ details.tarjeta-materia summary p {
   margin: 0;
 }
 
-/* Borde neón para las imágenes dentro del summary */
 details.tarjeta-materia summary img {
+  width: 100px;
+  height: 70px;
+  object-fit: cover;
   border: 1px solid var(--primary-neon) !important;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
 }
 
 details.tarjeta-materia summary:hover img {
@@ -1020,7 +982,6 @@ details.tarjeta-materia summary:hover img {
   box-shadow: 0 0 15px var(--primary-neon);
 }
 
-/* 3. Estado Abierto/Desplegado (<details open>) */
 details.tarjeta-materia[open] {
   border-color: var(--primary-neon);
   box-shadow: 0 0 20px rgba(0, 242, 254, 0.25);
@@ -1031,7 +992,6 @@ details.tarjeta-materia[open]:nth-child(even) {
   box-shadow: 0 0 20px rgba(255, 0, 127, 0.25);
 }
 
-/* Transición suave al revelar el contenido interno */
 details.tarjeta-materia[open] > *:not(summary) {
   animation: neonFadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1055,31 +1015,110 @@ details.tarjeta-materia h4 {
     transform: translateY(0);
   }
 }
-/* Ajustes para pantallas pequeñas (Celulares) */
-@media (max-width: 768px) {
-  /* Evita que la página se mueva hacia los lados */
-  html, body {
-    overflow-x: hidden;
-    width: 100%;
-  }
 
-  /* Reduce el tamaño de los títulos grandes */
-  h1, .titulo-principal {
-    font-size: 1.8rem !important;
-    word-wrap: break-word;
-  }
+/* ==========================================
+   REGISTRO Y VISIBILIDAD DEL MODAL NEÓN
+   ========================================== */
+#neon-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 999999 !important;
+  align-items: center;
+  justify-content: center;
+}
 
-  /* Cambia las columnas para que queden una debajo de otra */
-  .contenedor-grid, .flex-container, .clases-container {
-    display: flex !important;
-    flex-direction: column !important;
-    width: 100% !important;
-  }
+#neon-modal.active {
+  display: flex !important;
+}
 
-  /* Ajusta el ancho de las tarjetas */
-  .card, .tarjeta {
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box;
-  }
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 10, 20, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  position: relative !important;
+  width: 90%;
+  max-width: 600px;
+  background: rgba(10, 15, 30, 0.95) !important;
+  border: 1px solid var(--primary-neon, #00f2fe);
+  border-radius: 12px;
+  padding: 2.5rem 2rem 2rem 2rem !important;
+  box-shadow: 0 0 30px rgba(0, 242, 254, 0.3);
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.modal-close {
+  position: absolute !important;
+  top: 15px !important;
+  right: 15px !important;
+  background: transparent !important;
+  border: none !important;
+  color: #ff2a6d !important;
+  font-size: 1.8rem !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+  line-height: 1 !important;
+  z-index: 10 !important;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.modal-close:hover {
+  color: #ffffff !important;
+  text-shadow: 0 0 10px #ff2a6d !important;
+  transform: scale(1.15);
+}
+
+.modal-body-title {
+  color: var(--primary-neon, #00f2fe);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  padding-right: 1.5rem;
+}
+
+.modal-code-block {
+  background-color: rgba(2, 6, 12, 0.95) !important;
+  border: 1px solid rgba(0, 242, 254, 0.4) !important;
+  border-radius: 8px !important;
+  padding: 1rem !important;
+  margin-top: 1rem !important;
+  text-align: left !important;
+  box-shadow: inset 0 0 10px rgba(0, 242, 254, 0.15) !important;
+}
+
+.modal-code-block pre,
+.modal-code-block code {
+  font-family: 'Consolas', 'Courier New', monospace !important;
+  color: #00ff88 !important;
+  font-size: 0.9rem !important;
+  line-height: 1.5 !important;
+  white-space: pre !important;
+  word-break: normal !important;
+  overflow-x: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
