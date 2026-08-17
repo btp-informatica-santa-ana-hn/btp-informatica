@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test de Especialidad - BTP Informática</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- BARRA DE NAVEGACIÓN -->
+  <nav class="navbar">
+    <a href="index.html" class="logo-text">BTP INFORMÁTICA</a>
+    <a href="index.html" style="color: var(--primary-neon); text-decoration: none; font-weight: 700;">← Volver al Inicio</a>
+  </nav>
+
+  <main class="content-container">
+    
+    <header class="main-header">
+      <h1 class="glow-title">DESCUBRE TU ÁREA</h1>
+      <p style="color: var(--text-muted);">Responde estas preguntas para saber en cuál de las 6 materias destacas más.</p>
+    </header>
+
+    <div class="quiz-container glass-card" style="margin-top: 2rem;">
+      
+      <!-- BARRA DE PROGRESO -->
+      <div class="quiz-progress">
+        <div class="quiz-progress-bar" id="progressBar"></div>
+      </div>
+
+      <!-- CONTENEDOR DE PREGUNTAS -->
+      <div id="quizBody">
+        <h3 id="questionTitle" class="card-title" style="font-size: 1.4rem; margin-bottom: 1.5rem;">Cargando pregunta...</h3>
+        <div id="optionsContainer"></div>
+      </div>
+
+      <!-- CONTENEDOR DE RESULTADO -->
+      <div id="resultContainer" class="result-card" style="display: none;">
+        <span class="badge-neon">🎯 Tu Resultado</span>
+        <h2 id="resultTitle" style="color: var(--primary-neon); margin: 1rem 0;"></h2>
+        <p id="resultDescription" class="card-text" style="margin-bottom: 1.5rem;"></p>
+        <button onclick="restartQuiz()" class="quiz-option-btn" style="text-align: center; background: var(--secondary-neon); color: #fff; border: none;">
+          🔄 Repetir Test
+        </button>
+      </div>
+
+    </div>
+
+  </main>
+
+  <script>
+    const questions = [
+      {
+        question: "1. ¿Qué tipo de problemas o tareas prefieres resolver?",
+        options: [
+          { text: "Crear la lógica e instrucciones internas de un sistema.", category: "prog" },
+          { text: "Diseñar interfaces web modernas, limpias y visuales.", category: "web" },
+          { text: "Configurar la conexión a internet, IP y routers.", category: "redes" },
+          { text: "Diagnosticar, armar y reparar piezas físicas de cómputo.", category: "mante" },
+          { text: "Grabar, editar video y diseñar gráficos multimediales.", category: "media" },
+          { text: "Organizar gran cantidad de información e inventarios con tablas.", category: "db" }
+        ]
+      },
+      {
+        question: "2. En un proyecto tecnológico en equipo, tu aporte principal sería:",
+        options: [
+          { text: "Escribir código estructurado en Python o Java.", category: "prog" },
+          { text: "Maquetar la página web con HTML y CSS.", category: "web" },
+          { text: "Asegurar que todas las máquinas estén interconectadas.", category: "redes" },
+          { text: "Mantener el equipo de cómputo rápido y sin fallas físicas.", category: "mante" },
+          { text: "Crear el contenido audiovisual y la promoción digital.", category: "media" },
+          { text: "Diseñar la base de datos para almacenar usuarios y registros.", category: "db" }
+        ]
+      },
+      {
+        question: "3. ¿Qué herramienta o tecnología te da más curiosidad aprender?",
+        options: [
+          { text: "Algoritmos y estructuras de datos.", category: "prog" },
+          { text: "Estilos web CSS, animaciones y diseño adaptativo.", category: "web" },
+          { text: "Comandos de consola como ping, ipconfig y SSH.", category: "redes" },
+          { text: "Hardware, procesadores y mantenimiento preventivo.", category: "mante" },
+          { text: "Editores de video, audio y diseño digital.", category: "media" },
+          { text: "Consultas SQL y gestión de datos masivos.", category: "db" }
+        ]
+      }
+    ];
+
+    const resultsData = {
+      prog: {
+        title: "💻 Programación",
+        desc: "¡Tienes lógica analítica! Tu fuerte es el desarrollo de aplicaciones y solución de problemas con Python y Java."
+      },
+      web: {
+        title: "🌐 Desarrollo Web",
+        desc: "¡Combinas creatividad y estructura! Lo tuyo es maquetar y diseñar páginas interactivas con HTML y CSS."
+      },
+      redes: {
+        title: "📡 Redes y Comunicación",
+        desc: "¡Eres especialista en conectividad! Destacas analizando el tráfico de datos, cables y routers."
+      },
+      mante: {
+        title: "🔧 Mantenimiento de Cómputo",
+        desc: "¡Perfil 100% técnico práctico! Tu pasión es el hardware, ensamblaje y reparación de computadoras."
+      },
+      media: {
+        title: "🎬 Producciones Digitales",
+        desc: "¡Creatividad visual sin límites! Lo tuyo es la edición de video, diseño gráfico y producción multimedial."
+      },
+      db: {
+        title: "📊 Bases de Datos",
+        desc: "¡Organización y precisión! Destacas estructurando consultas SQL y administrando grandes volúmenes de información."
+      }
+    };
+
+    let currentQuestion = 0;
+    let scores = { prog: 0, web: 0, redes: 0, mante: 0, media: 0, db: 0 };
+
+    function loadQuestion() {
+      const q = questions[currentQuestion];
+      document.getElementById('questionTitle').innerText = q.question;
+      
+      const optionsContainer = document.getElementById('optionsContainer');
+      optionsContainer.innerHTML = '';
+
+      q.options.forEach(opt => {
+        const btn = document.createElement('button');
+        btn.className = 'quiz-option-btn';
+        btn.innerText = opt.text;
+        btn.onclick = () => selectOption(opt.category);
+        optionsContainer.appendChild(btn);
+      });
+
+      const progress = ((currentQuestion + 1) / questions.length) * 100;
+      document.getElementById('progressBar').style.width = `${progress}%`;
+    }
+
+    function selectOption(category) {
+      scores[category]++;
+      currentQuestion++;
+
+      if (currentQuestion < questions.length) {
+        loadQuestion();
+      } else {
+        showResult();
+      }
+    }
+
+    function showResult() {
+      document.getElementById('quizBody').style.display = 'none';
+      
+      let winningCategory = 'prog';
+      let maxScore = -1;
+
+      for (const cat in scores) {
+        if (scores[cat] > maxScore) {
+          maxScore = scores[cat];
+          winningCategory = cat;
+        }
+      }
+
+      const result = resultsData[winningCategory];
+      document.getElementById('resultTitle').innerText = result.title;
+      document.getElementById('resultDescription').innerText = result.desc;
+      document.getElementById('resultContainer').style.display = 'block';
+    }
+
+    function restartQuiz() {
+      currentQuestion = 0;
+      scores = { prog: 0, web: 0, redes: 0, mante: 0, media: 0, db: 0 };
+      document.getElementById('quizBody').style.display = 'block';
+      document.getElementById('resultContainer').style.display = 'none';
+      loadQuestion();
+    }
+
+    document.addEventListener('DOMContentLoaded', loadQuestion);
+  </script>
+</body>
+</html>

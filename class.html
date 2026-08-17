@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Asignaturas - BTP Informática</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .tarjeta-materia {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .tarjeta-materia:hover {
+            transform: translateY(-5px) scale(1.01);
+        }
+        summary {
+            outline: none;
+            list-style: none;
+        }
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        .galeria-imagenes img {
+            transition: transform 0.2s ease;
+        }
+        .galeria-imagenes img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVEGACIÓN PRINCIPAL -->
+<nav class="navbar">
+  <div class="logo-text">BTP INFORMÁTICA</div>
+  
+  <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<aside class="nav-menu" id="navMenu">
+  <a href="index.html"> Inicio (Feria Tecnológica)</a>
+  <a href="inicio.html"> Equipos y Laboratorios</a>
+  <a href="class.html" class="active">Clases y Asignaturas</a>
+</aside>
+
+    <!-- Encabezado Principal -->
+    <header class="hero-header">
+        <h1>Control de Asignaturas</h1>
+        <p>Portafolio Académico Técnico en Informática. Haz <b>clic</b> sobre cualquier materia para expandir su contenido.</p>
+    </header>
+
+    <!-- Contenedor Principal -->
+    <main class="container">
+        <table style="width: 100%; border-collapse: collapse; border: none;">
+            <tr>
+                <!-- COLUMNA IZQUIERDA: 11º GRADO -->
+                <td style="width: 50%; vertical-align: top; padding-right: 15px; border: none;">
+                    <section>
+                        <h2 style="color: var(--primary-neon); border-bottom: 2px solid var(--primary-neon); padding-bottom: 10px; margin-bottom: 25px;">Clases de 11.º Grado</h2>
+                        <div style="display: flex; flex-direction: column; gap: 20px;">
+
+                            <!-- MATERIA 1: OFIMÁTICA -->
+                            <details class="tarjeta-materia">
+                                <summary style="display: flex; align-items: center; gap: 15px; justify-content: space-between;">
+                                    <div style="flex: 2;">
+                                        <h3>Ofimática</h3>
+                                        <p>Herramientas de productividad laboral...</p>
+                                    </div>
+                                    <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=400" alt="Ofimática" style="width: 100px; height: 70px; border-radius: 6px; object-fit: cover;">
+                                </summary>
+                                <div style="margin-top: 20px; padding-top: 15px; border-top: 1px dashed rgba(255,255,255,0.2);">
+                                    <h4>Información Detallada</h4>
+                                    <p>Gestión técnica de suites de oficina automatizadas. Nos enfocamos en el procesamiento avanzado de texto, diseño de hojas de cálculo complejas con macros y bases de datos estructuradas para resolver problemas del entorno corporativo.</p>
+                                    <h4>Galería del Módulo:</h4>
+                                    <div class="galeria-imagenes" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300" alt="Hojas de cálculo" style="width: 45%; min-width: 120px; height: 95px; border-radius: 6px; object-fit: cover; border: 1px solid var(--primary-neon);">
+                                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300" alt="Análisis de datos" style="width: 45%; min-width: 120px; height: 95px; border-radius: 6px; object-fit: cover; border: 1px solid var(--primary-neon);">
+                                    </div>
+                                </div>
+                            </details>
+
+                            <!-- MATERIA 2: MATEMÁTICAS -->
+                            <details class="tarjeta-materia">
+                                <summary style="display: flex; align-items: center; gap: 15px; justify-content: space-between;">
+                                    <div style="flex: 2;">
+                                        <h3>Matemáticas</h3>
+                                        <p>Lógica analítica y cálculo...</p>
+                                    </div>
+                                    <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400" alt="Matemáticas" style="width: 100px; height: 70px; border-radius: 6px; object-fit: cover;">
+                                </summary>
+                                <div style="margin-top: 20px; padding-top: 15px; border-top: 1px dashed rgba(255,255,255,0.2);">
+                                    <h4>Información Detallada</h4>
+                                    <p>Desarrollo del pensamiento lógico-matemático aplicado a la informática. Estudiamos álgebra lineal, funciones polinómicas, trigonometría y matrices matemáticas esenciales para estructurar algoritmos eficientes en el desarrollo de software.</p>
+                                    <h4>Galería del Módulo:</h4>
+                                    <div class="galeria-imagenes" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                        <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?w=300" alt="Fórmulas y pizarra" style="width: 45%; min-width: 120px; height: 95px; border-radius: 6px; object-fit: cover; border: 1px solid var(--primary-neon);">
+                                        <img src="https://images.unsplash.com/photo-1518133680790-3985ece5668b?w=300" alt="Geometría" style="width: 45%; min-width: 120px; height: 95px; border-radius: 6px; object-fit: cover; border: 1px solid var(--primary-neon);">
+                                    </div>
+                                </div>
+                            </details>
+
+                            <!-- MATERIA 3: PROGRAMACIÓN I -->
+                            <details class="tarjeta-materia">
+                                <summary style="display: flex; align-items: center; gap: 15px; justify-content: space-between;">
+                                    <div style="flex: 2;">
+                                        <h3>Programación</h3>
+                                        <p>Bases algorítmicas y lógica...</p>
+                                    </div>
+                                    <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=400" alt="Programación" style="width: 100px; height: 70px; border-radius: 6px; object-fit: cover;">
+                                </summary>
+                                <div style="margin-top: 20px; padding-top: 15px; border-top: 1px dashed rgba(255,255,255,0.2);">
+                                    <h4>Información Detallada</h4>
+                                    <p>Introducción al diseño algorítmico y pseudocódigo. Aprendemos las bases de la programación estructurada usando estructuras de control secuenciales, condicionales (`if-else`) y ciclos repetitivos (`for`, `while`) para solucionar problemas informáticos.</p>
+                                    <h4>Galería del Módulo:</h4>
+                                    <div class="galeria-imagenes" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                        <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=300" alt="Código estructurado" style="width: 45%; min-width: 120px; height: 95px; border-radius: 6px; object-fit: cover; border: 1px solid var(--primary-neon);">
+                                        <img src="https://images.unsplash.com/photo-1607799279861-4dd421887fb3?w=300" alt="Consola de depuración" style="width: 45%; min-width: 120px; height: 95px; border-radius: 6px; object-fit: cover; border: 1px solid var(--primary-neon);">
+                                    </div>
+                                </div>
+                            </details>
+
+                            <!-- MATERIA 4: ANÁLISIS Y DISEÑO -->
+                            <details class="tarjeta-materia">
+                                <summary style="display: flex; align-items: center; gap: 15px; justify-content: space-between;">
+                                    <div style="flex: 2;">
+                                        <h3>Análisis y Diseño</h3>
+                                        <p>Ciclo de vida del software...</p>
+                                    </div>
+                                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=400" alt="Análisis y Diseño" style="width: 100px; height: 70px; border-radius: 6px; object-fit: cover;">
+                                </summary>
+                                <div style="margin-top: 20px; padding-top: 15px; border-top: 1px dashed rgba(255,255,255,0.2);">
+                                    <h4>Información Detallada</h4>
+                                    <p>Estudio sistemático de las etapas del software. Comprendemos la recolección de requisitos del cliente, diagramación con UML (casos de uso, clases) y la planificación estructurada del ciclo de vida de un sistema computacional.</p>
+                                    <h4>Galería del Módulo:</h4>
+                                    <div class="galeria-imagenes" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                        <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=300" alt="Planificación UX UI" style="width: 45%; min-width: 120px; height: 95px; border-radius: 6px; object-fit: cover; border: 1px solid var(--primary-neon);">
+                                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=300" alt="Diagramas de flujo" style="width: 45%; min-width: 120px; height: 95px; border-radius: 6px; object-fit: cover; border: 1px solid var(--primary-neon);">
+                                    </div>
+                                </div>
+                            </details>
+
+                            <!-- MATERIA 5: LEGISLACIÓN -->
+                            <details class="tarjeta-materia">
+                                <summary style="display: flex; align-items: center; gap: 15px; justify-content: space-between;">
+                                    <div style="flex: 2;">
+                                        <h3>Legislación Informática</h3>
+                                        <p>Leyes digitales y ética...</p>
+                                    </div>
+                                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400" alt="Legislación" style="width: 100px; height: 70px; border-radius: 6px; object-fit: cover;">
+                                </summary>
+                                <div style="margin-top: 20px; padding-top: 15px; border-top: 1px dashed rgba(255,255,255,0.2);">
+                                    <h4>Información Detallada</h4>
+                                    <p>Marco legal regulador de las Tecnologías de la Información y Comunicación. Análisis de leyes sobre propiedad intelectual, derechos de autor en el software, delitos cibernéticos, protección de datos personales y contratos digitales comerciales.</p>
+                                    <h4>Galería del Módulo:</h4>
+                                    <div class="galeria-imagenes" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                        <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?w=300" alt="Documentación legal" style="width: 45%; min-width: 120px; height: 95px; border-radius: 6px; object-fit: cover; border: 1px solid var(--primary-neon);">
+                                        <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=300" alt="Derecho informático" style="width: 45%; min-width: 120px; height: 95px; border-radius: 6px; object-fit: cover; border: 1px solid var(--primary-neon);">
+                                    </div>
+                                </div>
+                            </details>
+
+                            <!-- MATERIA 6: INFORMÁTICA APLICADA -->
+                            <details class="tarjeta-materia">
+                                <summary style="display: flex; align-items: center; gap: 15px; justify-content: space-between;">
+                                    <div style="flex: 2;">
+                                        <h3>Informática Aplicada</h3>
+                                        <p>Aplicaciones en entornos reales...</p>
+                                    </div>
+                                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400" alt="Informática Aplicada" style="width: 100px; height: 70px; border-radius: 6px; object-fit: cover;">
+                                </summary>
+                                <div style="margin-top: 20px; padding-top: 15px; border-top: 1px dashed rgba(255,255,255,0.2);">
+                                    <h4>Información Detallada</h4>
+                                    <p>Integración práctica de sistemas tecnológicos en diversas áreas comerciales. Aprendemos a utilizar software especializado para control logístico, gestión contable automatizada e implementación de utilitarios avanzados para optimizar flujos de trabajo.</p>
+                                    <h4>Galería del Módulo:</h4>
+                                    <div class="galeria-imagenes" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=300" alt="Uso de software empresarial" style="width: 45%; min-width: 120px; height: 95px; border-radius: 6px; object-fit: cover; border: 1px solid var(--primary-neon);">
+                                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=300" alt="Entorno tecnológico corporativo" style="width: 45%; min-width: 120px; height: 95px; border-radius: 6px; object-fit: cover; border: 1px solid var(--primary-neon);">
+                                    </div>
+                                </div>
+                            </details>
+
+                        </div>
+                    </section>
+                </td>
+
+                <!-- COLUMNA DERECHA: 12º GRADO -->
+                <td style="width: 50%; vertical-align: top; padding-left: 15px; border: none;">
+                    <section>
+                        <h2 style="color: var(--primary-neon); border-bottom: 2px solid var(--primary-neon); padding-bottom: 10px; margin-bottom: 25px;">Clases de 12.º Grado</h2>
+                        <div style="display: flex; flex-direction: column; gap: 20px;">
+
+                            <!-- MATERIA 1: PROGRAMACIÓN II -->
+                            <details class="tarjeta-materia">
+                                <summary style="display: flex; align-items: center; gap: 15px; justify-content: space-between;">
+                                    <div style="flex: 2;">
+                                        <h3>Programación II</h3>
+                                        <p>Bases de datos y persistencia avanzada...</p>
+                                    </div>
+                                    <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=400" alt="Programación" style="width: 100px; height: 70px; border-radius: 6px; object-fit: cover;">
+                                </summary>
+                                <div style="margin-top: 20px; padding-top: 15px; border-top: 1px dashed rgba(255,255,255,0.2);">
+                                    <h4>Información Detallada</h4>
+                                    <p>En esta asignatura se profundiza en la resolución de problemas lógicos mediante lenguajes estructurados y orientados a objetos. Desarrollamos aplicaciones de escritorio que gestionan sistemas relacionales de bases de datos, condicionales avanzados y matrices complejas.</p>
+                                    <h4>Galería del Módulo:</h4>
+                                    <div class="galeria-imagenes" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                        <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=300" alt="Código limpio" style="width: 45%; min-width: 120px; height: 95px; border-radius: 6px; object-fit: cover; border: 1px solid var(--primary-neon);">
+                                        <img src="https://images.unsplash.com/photo-1607799279861-4dd421887fb3?w=300" alt="Consola de desarrollo" style="width: 45%; min-width: 120px; height: 95px; border-radius: 6px; object-fit: cover; border: 1px solid var(--primary-neon);">
+                                    </div>
+                                </div>
+                            </details>
+
+                            <!-- MATERIA 2: DESARROLLO WEB -->
+                            <details class="tarjeta-materia">
+                                <summary style="display: flex; align-items: center; gap: 15px; justify-content: space-between;">
+                                    <div style="flex: 2;">
+                                        <h3>Desarrollo Web</h3>
+                                        <p>Maquetación, estándares y galería...</p>
+                                    </div>
+                                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=400" alt="Desarrollo Web" style="width: 100px; height: 70px; border-radius: 6px; object-fit: cover;">
+                                </summary>
+                                <div style="margin-top: 20px; padding-top: 15px; border-top: 1px dashed rgba(255,255,255,0.2);">
+                                    <h4>Información Detallada</h4>
+                                    <p>Construcción avanzada de aplicaciones y páginas web basadas en estándares modernos. Aprendemos la semántica correcta en HTML puro estructural, técnicas avanzadas de posicionamiento responsivo a través de CSS y comunicación interactiva del lado del cliente.</p>
+                                    <h4>Galería del Módulo:</h4>
+                                    <div class="galeria-imagenes" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                        <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=300" alt="Diseño de interfaz UI" style="width: 45%; min-width: 120px; height: 95px; border-radius: 6px; object-fit: cover; border: 1px solid var(--primary-neon);">
+                                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=300" alt="Programador web trabajando" style="width: 45%; min-width: 120px; height: 95px; border-radius: 6px; object-fit: cover; border: 1px solid var(--primary-neon);">
+                                    </div>
+                                </div>
+                            </details>
+
+                            <!-- MATERIA 3: GESTIÓN EMPRESARIAL -->
+                            <details class="tarjeta-materia">
+                                <summary style="display: flex; align-items: center; gap: 15px; justify-content: space-between;">
+                                    <div style="flex: 2;">
+                                        <h3>Gestión Empresarial</h3>
+                                        <p>Modelos de negocio y galería...</p>
+                                    </div>
+                                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400" alt="Gestión" style="width: 100px; height: 70px; border-radius: 6px; object-fit: cover;">
+                                </summary>
+                                <div style="margin-top: 20px; padding-top: 15px; border-top: 1px dashed rgba(255,255,255,0.2);">
+                                    <h4>Información Detallada</h4>
+                                    <p>Integración estratégica de tecnologías de información en las organizaciones. Estudio de metodologías de trabajo ágiles (Scrum), control presupuestario básico, viabilidad financiera y diseño técnico de modelos de negocio tecnológicos.</p>
+                                    <h4>Galería del Módulo:</h4>
+                                    <div class="galeria-imagenes" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=300" alt="Reunión de equipo" style="width: 45%; min-width: 120px; height: 95px; border-radius: 6px; object-fit: cover; border: 1px solid var(--primary-neon);">
+                                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=300" alt="Estrategia digital" style="width: 45%; min-width: 120px; height: 95px; border-radius: 6px; object-fit: cover; border: 1px solid var(--primary-neon);">
+                                    </div>
+                                </div>
+                            </details>
+
+                            <!-- MATERIA 4: PRODUCCIONES DIGITALES -->
+                            <details class="tarjeta-materia">
+                                <summary style="display: flex; align-items: center; gap: 15px; justify-content: space-between;">
+                                    <div style="flex: 2;">
+                                        <h3>Producciones Digitales</h3>
+                                        <p>Herramientas audiovisuales y galería...</p>
+                                    </div>
+                                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400" alt="Producción Digital" style="width: 100px; height: 70px; border-radius: 6px; object-fit: cover;">
+                                </summary>
+                                <div style="margin-top: 20px; padding-top: 15px; border-top: 1px dashed rgba(255,255,255,0.2);">
+                                    <h4>Información Detallada</h4>
+                                    <p>Diseño y maquetación avanzada de proyectos multimedia. Trabajamos con interfaces gráficas vectoriales, manipulación digital de imágenes fijas, y la edición, composición y renderización de video interactivo para web y redes.</p>
+                                    <h4>Galería del Módulo:</h4>
+                                    <div class="galeria-imagenes" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                        <img src="https://images.unsplash.com/photo-1551269901-5c5e14c25df7?w=300" alt="Edición de video" style="width: 45%; min-width: 120px; height: 95px; border-radius: 6px; object-fit: cover; border: 1px solid var(--primary-neon);">
+                                        <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=300" alt="Diseño digital tableta" style="width: 45%; min-width: 120px; height: 95px; border-radius: 6px; object-fit: cover; border: 1px solid var(--primary-neon);">
+                                    </div>
+                                </div>
+                            </details>
+
+                            <!-- MATERIA 5: REDES INFORMÁTICAS -->
+                            <details class="tarjeta-materia">
+                                <summary style="display: flex; align-items: center; gap: 15px; justify-content: space-between;">
+                                    <div style="flex: 2;">
+                                        <h3>Redes Informáticas</h3>
+                                        <p>Topologías, cableado estructurado...</p>
+                                    </div>
+                                    <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400" alt="Redes" style="width: 100px; height: 70px; border-radius: 6px; object-fit: cover;">
+                                </summary>
+                                <div style="margin-top: 20px; padding-top: 15px; border-top: 1px dashed rgba(255,255,255,0.2);">
+                                    <h4>Información Detallada</h4>
+                                    <p>Estudio estructural sobre la interconexión de sistemas. Aprendemos la configuración física de redes LAN/WAN, esquemas de direccionamiento IP (IPv4), mapeo de subredes, configuración de enrutadores y las técnicas esenciales del cableado estructurado.</p>
+                                    <h4>Galería del Módulo:</h4>
+                                    <div class="galeria-imagenes" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=300" alt="Rack de servidores" style="width: 45%; min-width: 120px; height: 95px; border-radius: 6px; object-fit: cover; border: 1px solid var(--primary-neon);">
+                                        <img src="https://images.unsplash.com/photo-1597733336794-12d05021d510?w=300" alt="Conectores e infraestructura" style="width: 45%; min-width: 120px; height: 95px; border-radius: 6px; object-fit: cover; border: 1px solid var(--primary-neon);">
+                                    </div>
+                                </div>
+                            </details>
+
+                            <!-- MATERIA 6: MANTENIMIENTO Y REPARACIÓN -->
+                            <details class="tarjeta-materia">
+                                <summary style="display: flex; align-items: center; gap: 15px; justify-content: space-between;">
+                                    <div style="flex: 2;">
+                                        <h3>Mantenimiento y Reparación</h3>
+                                        <p>Arquitectura de hardware y soporte...</p>
+                                    </div>
+                                    <img src="https://images.unsplash.com/photo-1588508065123-287b28e013da?w=400" alt="Mantenimiento" style="width: 100px; height: 70px; border-radius: 6px; object-fit: cover;">
+                                </summary>
+                                <div style="margin-top: 20px; padding-top: 15px; border-top: 1px dashed rgba(255,255,255,0.2);">
+                                    <h4>Información Detallada</h4>
+                                    <p>Diagnóstico preventivo y correctivo de componentes físicos e lógicos. Ensamblaje de equipos computacionales, formateo, instalación de sistemas operativos, controladores y resolución de fallas de hardware.</p>
+                                    <h4>Galería del Módulo:</h4>
+                                    <div class="galeria-imagenes" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                        <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=300" alt="Procesador y tarjeta madre" style="width: 45%; min-width: 120px; height: 95px; border-radius: 6px; object-fit: cover; border: 1px solid var(--primary-neon);">
+                                        <img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?w=300" alt="Herramientas de reparación" style="width: 45%; min-width: 120px; height: 95px; border-radius: 6px; object-fit: cover; border: 1px solid var(--primary-neon);">
+                                    </div>
+                                </div>
+                            </details>
+
+                        </div>
+                    </section>
+                </td>
+            </tr>
+        </table>
+    </main>
+    
+     <footer class="cyber-footer">
+  <div class="footer-container">
+    
+    
+<!-- CAJITA DE CONTACTO (Con Escudo del Colegio) -->
+    <div class="footer-card" id="contacto">
+      <div class="footer-card-header">
+        <img src="logo1.jpeg" alt="Escudo C.E.M.G. Santa Ana" class="footer-card-logo">
+        <div>
+          <h3 class="footer-title"><span class="highlight-cyan"> CONTACTO</span></h3>
+          <p class="footer-subtitle-text">CEMG Santa Ana</p>
+        </div>
+      </div>
+      <ul class="contact-list">
+        <li>📍 <span>Santa Ana, Francisco Morazán, Honduras</span></li>
+        <li>✉️ <span>mirian.valenzuela@educatrachos.hn</span></li>
+        <li>🕒 <span>Jornada Matutina y Nocturna</span></li>
+      </ul>
+    </div>
+    <!-- CAJITA DE CRÉDITOS -->
+  <div class="footer-card" id="creditos">
+      <div class="footer-card-header">
+        <img src="logo2.jpeg" alt="Escudo BTP Informática" class="footer-card-logo">
+        <div>
+          <h3 class="footer-title"><span class="highlight-pink">S CRÉDITOS</span></h3>
+          <p class="footer-subtitle-text">Desarrollo Web</p>
+        </div>
+      </div>
+
+      <div class="credits-grid">
+        <div class="credit-group">
+          <h4 class="group-title">12 "1" BTP Informática:</h4>
+          <ul class="student-list">
+            <li>Isis Avila</li>
+            <li>Genesis García</li>
+            <li>Fergie Colindres</li>
+          </ul>
+        </div>
+
+        <div class="credit-group">
+          <h4 class="group-title">12 "2" BTP Informática:</h4>
+          <ul class="student-list">
+            <li>Joel Torres</li>
+            <li>Anderlin Flores</li>
+            <li>Eduardo Fonseca</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BARRA DERECHOS DE AUTOR -->
+  <div class="footer-bottom">
+    <p>© 2026 BTP en Informática — CEMG Santa Ana | Todos los derechos reservados</p>
+  </div>
+</footer>
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const navMenu = document.getElementById('navMenu');
+        const menuOverlay = document.getElementById('menuOverlay');
+
+        function toggleMenu() {
+            hamburgerBtn.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+        }
+
+        hamburgerBtn.addEventListener('click', toggleMenu);
+        menuOverlay.addEventListener('click', toggleMenu);
+    </script>
+</body>
+</html>

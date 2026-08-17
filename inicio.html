@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BTP Informática - Nuestros Laboratorios & Infraestructura</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ <!-- NAVERACIÓN PRINCIPAL UNIFICADA -->
+<nav class="navbar">
+  <div class="logo-text">BTP INFORMÁTICA</div>
+  
+  <!-- Botón Hamburguesa -->
+  <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- Capa oscura de fondo al abrir el menú -->
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<!-- Menú Lateral Desplegable -->
+<aside class="nav-menu" id="navMenu">
+  <a href="index.html"> Inicio (Feria Tecnológica)</a>
+  <a href="inicio.html"class="active"> Equipos y Laboratorios</a>
+  <a href="class.html">Clases y Asignaturas</a>
+</aside>
+
+  <!-- HERO HEADER -->
+  <header class="hero-header" id="inicio">
+    <span class="badge-neon">Infraestructura Tecnológica de Vanguardia</span>
+    <h1>Nuestros Laboratorios</h1>
+    <p>
+      Instalaciones equipadas con tecnología de alto rendimiento para el aprendizaje práctico en desarrollo de software, arquitectura de redes UTP/Wi-Fi y mantenimiento avanzado de cómputo.
+    </p>
+  </header>
+
+  <main class="container">
+
+    <!-- MARCADOR DE ESTADÍSTICAS -->
+    <section class="stats-bar">
+      <div class="stat-item glass-card">
+        <h3>2</h3>
+        <p>Laboratorios Especializados</p>
+      </div>
+      <div class="stat-item glass-card">
+        <h3>+40</h3>
+        <p>PCs de Escritorio</p>
+      </div>
+      <div class="stat-item glass-card">
+        <h3>+50</h3>
+        <p>Laptops Portátiles</p>
+      </div>
+      <div class="stat-item glass-card">
+        <h3>4</h3>
+        <p>Redes Wi-Fi Dedicadas</p>
+      </div>
+    </section>
+
+    <!-- TARJETAS DETALLADAS DE LOS LABORATORIOS -->
+    <section id="instalaciones" style="margin-bottom: 4rem;">
+      <h2 class="section-title">Áreas de <span>Aprendizaje Técnico</span></h2>
+      
+      <div class="grid-cards">
+        
+        <!-- Laboratorio 01 -->
+        <article class="card">
+          <span class="badge-neon">Lab 01</span>
+          <h3>Laboratorio Teórico-Práctico</h3>
+          <p>
+            Espacio reacondicionado para impartición de clases magistrales, soporte técnico multimedia y gestión centralizada de equipos portátiles.
+          </p>
+          <ul class="feature-list">
+            <li>📺 <strong>Smart TV LG de 64":</strong> Pantalla principal para proyecciones en alta resolución y demostraciones de código.</li>
+            <li>💻 <strong>Mueble de Almacenamiento (Chinero):</strong> Estación central con más de 50 Laptops listas.</li>
+            <li>📹 <strong>Proyector HD:</strong> Equipo multimedia para presentaciones de proyectos estudiantiles.</li>
+            <li>📶 <strong>Conectividad Dual:</strong> 2 Redes Wi-Fi exclusivas (Lab_01_A y Lab_01_B).</li>
+            <li>❄️ <strong>Climatización:</strong> Sistema de Aire Acondicionado.</li>
+          </ul>
+        </article>
+
+        <!-- Laboratorio 02 -->
+        <article class="card">
+          <span class="badge-neon" style="background: rgba(0, 242, 254, 0.2); color: var(--primary-neon);">Lab 02</span>
+          <h3 style="color: var(--secondary-neon);">Laboratorio de Alto Rendimiento</h3>
+          <p>
+            Estación de trabajo principal para el desarrollo de software, simulación de redes en Cisco Packet Tracer y armado de hardware.
+          </p>
+          <ul class="feature-list">
+            <li>🖥️ <strong>+40 Computadoras de Escritorio:</strong> Estaciones fijas optimizadas para compilación e IDEs de desarrollo.</li>
+            <li>💻 <strong>+50 Laptops de Soporte:</strong> Equipos adicionales para prácticas grupales simultáneas.</li>
+            <li>📺 <strong>Pantalla TV de Gran Formato:</strong> Para presentación de exposiciones y trabajos de forma HDMI.</li>
+            <li>📹 <strong>Proyector de Alta Luminosidad:</strong> Proyección auxiliar para laboratorios prácticos.</li>
+            <li>📶 <strong>Red de Alta Velocidad:</strong> 2 Redes Wi-Fi exclusivas para el Lab 02.</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- INVENTARIO DE HARDWARE & HERRAMIENTAS -->
+    <section id="equipamiento" style="margin-bottom: 4rem;">
+      <h2 class="section-title">Herramientas & <span>Equipamiento</span></h2>
+      
+      <div class="glass-card">
+        <div class="grid-cards" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;">
+          
+          <div>
+            <h4 style="color: var(--secondary-neon); margin-bottom: 0.8rem; font-size: 1.15rem;">🛠️ Redes & Cableado UTP</h4>
+            <ul style="color: var(--text-muted); padding-left: 1.2rem; line-height: 1.8;">
+              <li>Crimpadoras profesionales RJ45.</li>
+              <li>Ponchadoras de impacto para Jacks Keystone.</li>
+              <li>Testers continuos para cables UTP Cat6.</li>
+              <li>Conectores RJ45 de alta durabilidad.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 style="color: var(--secondary-neon); margin-bottom: 0.8rem; font-size: 1.15rem;">🔌 Periféricos & Imagen</h4>
+            <ul style="color: var(--text-muted); padding-left: 1.2rem; line-height: 1.8;">
+              <li>Cables HDMI de alta velocidad.</li>
+              <li>Teclados ergonómicos para programación.</li>
+              <li>Mouses ópticos de alta precisión.</li>
+              <li>Adaptadores Wi-Fi.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 style="color: var(--secondary-neon); margin-bottom: 0.8rem; font-size: 1.15rem;">⚡ Mantenimiento Preventivo</h4>
+            <ul style="color: var(--text-muted); padding-left: 1.2rem; line-height: 1.8;">
+              <li>Juegos de destornilladores.</li>
+              <li>Limpia contactos y aire comprimido.</li>
+              <li>Pasta térmica de alto rendimiento.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 style="color: var(--secondary-neon); margin-bottom: 0.8rem; font-size: 1.15rem;">❄️ Infraestructura & Confort</h4>
+            <ul style="color: var(--text-muted); padding-left: 1.2rem; line-height: 1.8;">
+              <li>Aire Acondicionado.</li>
+              <li>Sistemas de iluminación LED.</li>
+              <li>Proyectores y pantallas en cada sala.</li>
+              <li>Sistemas de alimentación ininterrumpida (UPS).</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MÓDULOS DE APLICACIÓN TÉCNICA -->
+    <section id="modulos" style="margin-bottom: 4rem;">
+      <h2 class="section-title">Especialidades <span>en Lab</span></h2>
+      
+      <div class="grid-cards">
+        <div class="glass-card">
+          <span class="badge-neon">Área 01</span>
+          <h3>Desarrollo de Software</h3>
+          <p>
+            Lógica de programación y POO en C++ y Python. Creación de interfaces y páginas web modernas con HTML, Sublime Text y Visual Studio Code.
+          </p>
+        </div>
+
+        <div class="glass-card">
+          <span class="badge-neon">Área 02</span>
+          <h3>Redes & Conectividad</h3>
+          <p>
+            Ponchado y ponchadoras de redes UTP Cat6, subredes IP, diagnósticos en consola con <code>ping</code>, <code>nslookup</code>, <code>nmap</code> y configuración de routers.
+          </p>
+        </div>
+
+        <div class="glass-card">
+          <span class="badge-neon">Área 03</span>
+          <h3>Soporte & Mantenimiento</h3>
+          <p>
+            Ensamblaje de componentes de PC, configuración de BIOS/UEFI en equipos Dell/HP, formateo de unidades, instalación de SO y controladores.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERÍA DE ACTIVIDADES (REELS GRID) -->
+    <section id="galeria" style="margin-bottom: 4rem;">
+      <h2 class="section-title">Demostración <span>Práctica</span></h2>
+      <p style="color: var(--text-muted); text-align: center; margin-bottom: 1.5rem;">Haz clic en cualquier tarjeta para ver detalles y ejemplos en vivo.</p>
+      
+      <div class="reels-grid">
+        
+        <!-- Tarjeta 1: Ponchado de Cables -->
+        <div class="reel-card" onclick="openModal('utp')">
+          <span class="reel-badge">📸 FOTO</span>
+          <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80" alt="Redes UTP" class="reel-media">
+          <div class="reel-overlay">
+            <h4>Ponchado de Cables UTP</h4>
+            <p>Práctica de conectores RJ45 bajo estándar T568B.</p>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2: Programación C++ -->
+        <div class="reel-card" onclick="openModal('cpp')">
+          <span class="reel-badge">💻 CÓDIGO</span>
+          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=600&q=80" alt="Programación C++" class="reel-media">
+          <div class="reel-overlay">
+            <h4>Programación C++</h4>
+            <p>Creación de algoritmos y manipulación de archivos.</p>
+          </div>
+        </div>
+
+        <!-- Tarjeta 3: Mantenimiento PC -->
+        <div class="reel-card" onclick="openModal('hardware')">
+          <span class="reel-badge">🛠️ HARDWARE</span>
+          <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=600&q=80" alt="Mantenimiento PC" class="reel-media">
+          <div class="reel-overlay">
+            <h4>Mantenimiento PC</h4>
+            <p>Diagnóstico de BIOS y limpieza de componentes.</p>
+          </div>
+        </div>
+
+        <!-- Tarjeta 4: Diseño Web -->
+        <div class="reel-card" onclick="openModal('web')">
+          <span class="reel-badge">🌐 WEB</span>
+          <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" alt="Diseño Web" class="reel-media">
+          <div class="reel-overlay">
+            <h4>Diseño Web Frontend</h4>
+            <p>Maquetación de portafolios y sitios informativos.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Ventana Modal Emergente -->
+    <div id="neon-modal" class="modal-overlay" onclick="closeModalOnOuterClick(event)">
+      <div class="modal-content glass-card">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <div id="modal-body">
+          <!-- El contenido dinámico se inyectará con JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <!-- TERMINAL INTERACTIVA DE ESTADO -->
+    <section id="redes" style="margin-bottom: 4rem;">
+      <h2 class="section-title">Consola de <span>Estado del Sistema</span></h2>
+      
+      <div class="terminal-box">
+        <div class="terminal-header">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+          <span style="color: var(--text-muted); font-size: 0.8rem; margin-left: 10px;">bash - btp-node-server@192.168.1.1</span>
+        </div>
+        
+        <p style="margin-bottom: 0.3rem;">root@btp-laboratorios:~# status --network</p>
+        <p style="color: #27c93f;">[OK] Wi-Fi Lab_01_A (5GHz) - Online | 100 Mbps</p>
+        <p style="color: #27c93f;">[OK] Wi-Fi Lab_01_B (2.4GHz) - Online | Cobertura Óptima</p>
+        <p style="color: #27c93f;">[OK] Wi-Fi Lab_02_A (5GHz) - Online | Latencia: 3ms</p>
+        <p style="color: #27c93f;">[OK] Wi-Fi Lab_02_B (2.4GHz) - Online | Cobertura Óptima</p>
+        
+        <p style="margin-top: 1rem; margin-bottom: 0.3rem;">root@btp-laboratorios:~# status --hardware</p>
+        <p style="color: var(--primary-neon);">[INFO] PCs de Escritorio Lab 02: 40/40 Estaciones Operativas</p>
+        <p style="color: var(--primary-neon);">[INFO] Laptops Portátiles: 50 Unidades Verificadas en Almacén</p>
+        <p style="color: var(--primary-neon);">[INFO] Salida de Video: Smart TV LG 64" + Proyectores</p>
+
+        <p style="margin-top: 1rem; margin-bottom: 0.3rem;">root@btp-laboratorios:~# status --clima</p>
+        <p style="color: #ffbd2e;">[INFO] Aire Acondicionado: ACTIVO </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contacto">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>BTP INFORMÁTICA</h3>
+        <p>
+          Formando a los futuros profesionales de la tecnología con herramientas modernas e infraestructura de vanguardia.
+        </p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Ubicación</h3>
+        <p>Edificio Principal de Informática</p>
+        <p>Laboratorios 01 y 02</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Especialidad</h3>
+        <p>Bachillerato Técnico Profesional en Informática</p>
+        <p style="color: var(--primary-neon); font-weight: 700;">Sección 12-2</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 BTP Informática - Todos los derechos reservados.</p>
+      <p style="margin-top: 0.4rem; color: var(--primary-neon);">Joel Alexander Torres Figueroa - 12mo 2</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // ===== MENÚ HAMBURGUESA =====
+      try {
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        const overlay = document.getElementById('menuOverlay');
+
+        if (hamburger && navMenu && overlay) {
+          function toggleMenu() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+          }
+          hamburger.addEventListener('click', toggleMenu);
+          overlay.addEventListener('click', toggleMenu);
+
+          document.querySelectorAll('.nav-menu a').forEach(function (link) {
+            link.addEventListener('click', function () {
+              hamburger.classList.remove('active');
+              navMenu.classList.remove('active');
+              overlay.classList.remove('active');
+            });
+          });
+        }
+      } catch (e) {
+        console.error('Error en el menú:', e);
+      }
+    });
+
+    // ===== DATOS DEL MODAL =====
+    const modalData = {
+      utp: {
+        title: "🛠️ Ponchado de Cables UTP (Norma T568B)",
+        content: `
+          <p style="color: var(--text-muted); margin-bottom: 1rem;">
+            Práctica técnica en laboratorio donde se elaboran cables de parcheo RJ45 para redes LAN locales.
+          </p>
+          <h4 style="color: var(--secondary-neon); margin-bottom: 0.5rem;">Secuencia de Colores (Estándar T568B):</h4>
+          <ol style="color: var(--text-main); padding-left: 1.2rem; line-height: 1.8;">
+            <li>Blanco / Naranja</li>
+            <li>Naranja</li>
+            <li>Blanco / Verde</li>
+            <li>Azul</li>
+            <li>Blanco / Azul</li>
+            <li>Verde</li>
+            <li>Blanco / Marrón</li>
+            <li>Marrón</li>
+          </ol>
+          <div class="modal-code-block">Herramientas usadas: Crimpadora RJ45, Tester UTP Cat6, Ponchadora de impacto.</div>
+        `
+      },
+      cpp: {
+        title: "💻 Programación C++ (Estructuras y Archivos)",
+        content: `
+          <p style="color: var(--text-muted); margin-bottom: 1rem;">
+            Desarrollo de algoritmos, manejo de arreglos y persistencia de datos mediante archivos.
+          </p>
+          <h4 style="color: var(--secondary-neon); margin-bottom: 0.5rem;">Código de Ejemplo en Lab:</h4>
+          <div class="modal-code-block">#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "BTP Informática - Lab 02" &lt;&lt; endl;
+    cout &lt;&lt; "Sistema de Gestión de Redes Activo" &lt;&lt; endl;
+    return 0;
+}</div>
+        `
+      },
+      hardware: {
+        title: "🛠️ Mantenimiento Preventivo & BIOS",
+        content: `
+          <p style="color: var(--text-muted); margin-bottom: 1rem;">
+            Diagnóstico e inspección de componentes físicos de hardware en laptops y computadoras de escritorio.
+          </p>
+          <h4 style="color: var(--secondary-neon); margin-bottom: 0.5rem;">Procedimiento Realizado:</h4>
+          <ul style="color: var(--text-main); padding-left: 1.2rem; line-height: 1.8;">
+            <li>Desensamblado de chasis y limpieza de polvo con aire comprimido.</li>
+            <li>Aplicación de pasta térmica de alta conductividad.</li>
+            <li>Configuración de BIOS/UEFI (modo SATA, prioridades de booteo FAT32/NTFS).</li>
+            <li>Pruebas de diagnóstico de memoria RAM y temperatura.</li>
+          </ul>
+        `
+      },
+      web: {
+        title: "🌐 Maquetación Frontend Neón",
+        content: `
+          <p style="color: var(--text-muted); margin-bottom: 1rem;">
+            Diseño web moderno utilizando HTML5, CSS Grid, Flexbox y temas neón con efectos visuales.
+          </p>
+          <h4 style="color: var(--secondary-neon); margin-bottom: 0.5rem;">Regla CSS de Ejemplo:</h4>
+          <div class="modal-code-block">.glow-card {
+  background: rgba(18, 24, 43, 0.85);
+  border: 1px solid #00f2fe;
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
+}</div>
+        `
+      }
+    };
+
+    function openModal(key) {
+      const data = modalData[key];
+      if (!data) return;
+
+      const modalBody = document.getElementById("modal-body");
+      modalBody.innerHTML = `
+        <h3 class="modal-body-title">${data.title}</h3>
+        ${data.content}
+      `;
+
+      document.getElementById("neon-modal").classList.add("active");
+    }
+
+    function closeModal() {
+      document.getElementById("neon-modal").classList.remove("active");
+    }
+
+    function closeModalOnOuterClick(event) {
+      if (event.target.id === "neon-modal") {
+        closeModal();
+      }
+    }
+  </script>
+ <footer class="cyber-footer">
+  <div class="footer-container">
+    
+    
+<!-- CAJITA DE CONTACTO (Con Escudo del Colegio) -->
+    <div class="footer-card" id="contacto">
+      <div class="footer-card-header">
+        <img src="logo1.jpeg" alt="Escudo C.E.M.G. Santa Ana" class="footer-card-logo">
+        <div>
+          <h3 class="footer-title"><span class="highlight-cyan"> CONTACTO</span></h3>
+          <p class="footer-subtitle-text">CEMG Santa Ana</p>
+        </div>
+      </div>
+      <ul class="contact-list">
+        <li>📍 <span>Santa Ana, Francisco Morazán, Honduras</span></li>
+        <li>✉️ <span>mirian.valenzuela@educatrachos.hn</span></li>
+        <li>🕒 <span>Jornada Matutina y Nocturna</span></li>
+      </ul>
+    </div>
+    <!-- CAJITA DE CRÉDITOS -->
+  <div class="footer-card" id="creditos">
+      <div class="footer-card-header">
+        <img src="logo2.jpeg" alt="Escudo BTP Informática" class="footer-card-logo">
+        <div>
+          <h3 class="footer-title"><span class="highlight-pink">S CRÉDITOS</span></h3>
+          <p class="footer-subtitle-text">Desarrollo Web</p>
+        </div>
+      </div>
+
+      <div class="credits-grid">
+        <div class="credit-group">
+          <h4 class="group-title">12 "1" BTP Informática:</h4>
+          <ul class="student-list">
+            <li>Isis Avila</li>
+            <li>Genesis García</li>
+            <li>Fergie Colindres</li>
+          </ul>
+        </div>
+
+        <div class="credit-group">
+          <h4 class="group-title">12 "2" BTP Informática:</h4>
+          <ul class="student-list">
+            <li>Joel Torres</li>
+            <li>Anderlin Flores</li>
+            <li>Eduardo Fonseca</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BARRA DERECHOS DE AUTOR -->
+  <div class="footer-bottom">
+    <p>© 2026 BTP en Informática — CEMG Santa Ana | Todos los derechos reservados</p>
+  </div>
+</footer>
+
+
+ <script>
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const navMenu = document.getElementById('navMenu');
+  const menuOverlay = document.getElementById('menuOverlay');
+
+  hamburgerBtn.addEventListener('click', () => {
+    hamburgerBtn.classList.toggle('active');
+    navMenu.classList.toggle('active');
+    menuOverlay.classList.toggle('active');
+  });
+
+  menuOverlay.addEventListener('click', () => {
+    hamburgerBtn.classList.remove('active');
+    navMenu.classList.remove('active');
+    menuOverlay.classList.remove('active');
+  });
+</script>
+</body>
+</html>
